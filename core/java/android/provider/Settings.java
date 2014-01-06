@@ -6281,6 +6281,12 @@ public final class Settings {
         public static final String HEADS_UP_STOPLIST_VALUES = "heads_up_stoplist_values";
 
         /**
+         * Force expanded notifications on all apps that support it.
+         * @hide
+         */
+        public static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
+
+        /**
          * Which applications to disable heads up notifications for
          *
          * @hide
