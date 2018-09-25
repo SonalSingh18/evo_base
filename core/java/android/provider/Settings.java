@@ -6846,6 +6846,12 @@ public final class Settings {
         public static final String RIGHT_PADDING = "statusbar_right_padding";
 
         /**
+         * Unlock keystore with fingerprint after reboot
+         * @hide
+         */
+        public static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
+
+        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
@@ -7015,6 +7021,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(LOCKSCREEN_BATTERY_INFO);
             PRIVATE_SETTINGS.add(MUSIC_TILE_TITLE);
             PRIVATE_SETTINGS.add(SENSOR_BLOCK);
+            PRIVATE_SETTINGS.add(FP_UNLOCK_KEYSTORE);
         }
 
         /**
