@@ -524,4 +524,5 @@ public class EvolutionUtils {
         return sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null
                 && sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null;
     }
+
 }

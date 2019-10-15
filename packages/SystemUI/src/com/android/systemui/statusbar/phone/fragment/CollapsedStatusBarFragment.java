@@ -30,7 +30,10 @@ import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.ContentResolver;
 import android.database.ContentObserver;
+import android.os.Handler;
+import android.os.UserHandle;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.Settings;
@@ -138,6 +141,30 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
 
     private List<String> mBlockedIcons = new ArrayList<>();
 
+    private View mCustomCarrierLabel;
+    private int mShowCarrierLabel;
+    private final Handler mHandler = new Handler();
+
+    private class SettingsObserver extends ContentObserver {
+       SettingsObserver(Handler handler) {
+           super(handler);
+       }
+
+       void observe() {
+         mContentResolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_SHOW_CARRIER),
+                    false, this, UserHandle.USER_ALL);
+       }
+
+       @Override
+       public void onChange(boolean selfChange) {
+           updateSettings(true);
+       }
+    }
+
+    private SettingsObserver mSettingsObserver;
+    private ContentResolver mContentResolver;
+
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
         public void setIsAirplaneMode(@NonNull IconState icon) {
@@ -241,6 +268,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mBatteryMeterView = mStatusBar.findViewById(R.id.battery);
         mBatteryMeterView.addCallback(mBatteryMeterViewCallback);
         mOngoingCallChip = mStatusBar.findViewById(R.id.ongoing_call_chip);
+        mCustomCarrierLabel = mStatusBar.findViewById(R.id.statusbar_carrier_text);
         showSystemIconArea(false);
         showClock(false);
         initEmergencyCryptkeeperText();
@@ -465,8 +493,10 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         // Hide notifications if the disable flag is set or we have an ongoing call.
         if (disableNotifications || hasOngoingCall) {
             hideNotificationIconArea(animate);
+            hideCarrierName(animate);
         } else {
             showNotificationIconArea(animate);
+            showCarrierName(animate);
         }
 
         // Show the ongoing call chip only if there is an ongoing call *and* notification icons
@@ -555,6 +585,18 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     public void showOperatorName(boolean animate) {
         if (mOperatorNameViewController != null) {
             animateShow(mOperatorNameViewController.getView(), animate);
+        }
+    }
+
+    public void hideCarrierName(boolean animate) {
+        if (mCustomCarrierLabel != null) {
+            animateHide(mCustomCarrierLabel, animate);
+        }
+    }
+
+    public void showCarrierName(boolean animate) {
+        if (mCustomCarrierLabel != null) {
+            setCarrierLabel(animate);
         }
     }
 
@@ -706,4 +748,20 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
                     updateStatusBarLocation(left, right);
                 }
             };
+
+    public void updateSettings(boolean animate) {
+        mShowCarrierLabel = Settings.System.getIntForUser(mContentResolver,
+                Settings.System.STATUS_BAR_SHOW_CARRIER, 1,
+                UserHandle.USER_CURRENT);
+
+        setCarrierLabel(animate);
+        }
+
+    private void setCarrierLabel(boolean animate) {
+        if (mShowCarrierLabel == 2 || mShowCarrierLabel == 3) {
+            animateShow(mCustomCarrierLabel, animate);
+        } else {
+            animateHide(mCustomCarrierLabel, animate);
+        }
+    }
 }
