@@ -62,6 +62,12 @@
             android:defaultValue="false" />
 
         <com.evolution.settings.preference.SecureSettingSwitchPreference
+            android:key="hide_lock_shortcuts"
+            android:title="@string/lockscreen_hide_shortcuts_title"
+            android:summary="@string/lockscreen_hide_shortcuts_summary"
+            android:defaultValue="false" />
+
+        <com.evolution.settings.preference.SecureSettingSwitchPreference
             android:key="secure_lockscreen_qs_disabled"
             android:title="@string/disable_qs_title"
             android:summary="@string/disable_qs_summary"
