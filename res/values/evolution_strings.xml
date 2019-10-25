@@ -548,4 +548,7 @@
     <string name="volume_dialog_timeout_title">Volume panel timeout</string>
     <string name="volume_dialog_timeout_summary">The time it takes for volume panel to fade</string>
 
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
+
 </resources>
