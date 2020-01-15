@@ -763,6 +763,7 @@ public final class PowerManagerService extends SystemService
     private int mEvent;
 
     // Smart charging
+    private boolean mSmartChargingAvailable;
     private boolean mSmartChargingEnabled;
     private boolean mSmartChargingResetStats;
     private boolean mPowerInputSuspended = false;
@@ -1469,6 +1470,8 @@ public final class PowerManagerService extends SystemService
         mCustomButtonBrightness = resources.getInteger(
                 com.android.internal.R.integer.config_button_brightness_default);
         // Smart charging
+        mSmartChargingAvailable = resources.getBoolean(
+                com.android.internal.R.bool.config_supportSmartCharging);
         mSmartChargingLevelDefaultConfig = resources.getInteger(
                 com.android.internal.R.integer.config_smartChargingBatteryLevel);
         mSmartChargingResumeLevelDefaultConfig = resources.getInteger(
@@ -2531,9 +2534,10 @@ public final class PowerManagerService extends SystemService
     }
 
     /*
-     * Suspend or resume charging based on the current Smart Feature settings 
+     * Suspend or resume charging based on the current Smart Feature settings
      */
     private void updateSmartFeatureStatus() {
+        if (!mSmartChargingAvailable) return;
         if (mPowerInputSuspended) {
             boolean resumeBySmartCharging = !mSmartChargingEnabled || (mSmartChargingEnabled && (mBatteryLevel <= mSmartChargingResumeLevel));
             boolean resumeBySmartCutoff = !mSmartCutoffEnabled || (mSmartCutoffEnabled && (mBatteryTemperature <= mSmartCutoffResumeTemperature));
