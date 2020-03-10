@@ -276,6 +276,10 @@ endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
+# Seedvault
+PRODUCT_PACKAGES += \
+    Seedvault
+
 # TouchGestures
 PRODUCT_PACKAGES += \
     TouchGestures
