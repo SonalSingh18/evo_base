@@ -534,4 +534,8 @@
     <!-- Lockscreen timeout -->
     <string name="lockscreen_timeout_title">Lockscreen timeout</string>
 
+    <!-- Battery health -->
+    <string name="current_battery_capacity">Current battery capacity</string>
+    <string name="designed_battery_capacity">Designed battery capacity</string>
+
 </resources>

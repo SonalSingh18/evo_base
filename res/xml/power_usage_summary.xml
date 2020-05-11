@@ -110,8 +110,20 @@
         android:defaultValue="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
-        android:key="battery_temp"
+        android:key="designed_battery_capacity"
         android:order="7"
+        android:title="@string/designed_battery_capacity"
+        android:selectable="false" />
+
+    <com.android.settings.fuelgauge.PowerGaugePreference
+        android:key="current_battery_capacity"
+        android:order="8"
+        android:title="@string/current_battery_capacity"
+        android:selectable="false" />
+
+    <com.android.settings.fuelgauge.PowerGaugePreference
+        android:key="battery_temp"
+        android:order="9"
         android:title="@string/battery_temp"
         android:selectable="false" />
 
