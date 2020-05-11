@@ -36,4 +36,9 @@
 
     <!-- Whether to show custom screen resolution settings -->
     <bool name="config_show_custom_screen_resolution_switch">true</bool>
+
+    <!-- Battery Health -->
+    <string name="config_batCurCap"></string>
+    <string name="config_batDesCap"></string>
+
 </resources>
