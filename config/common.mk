@@ -275,3 +275,7 @@ $(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
