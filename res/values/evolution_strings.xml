@@ -535,4 +535,8 @@
 
     <string name="battery_24_hrs_stats_title" translatable="false">24-hour battery usage</string>
     <string name="battery_24_hrs_stats_summary" translatable="false">View usage for past 24 hours</string>
+
+    <!-- Lockscreen timeout -->
+    <string name="lockscreen_timeout_title">Lockscreen timeout</string>
+
 </resources>
