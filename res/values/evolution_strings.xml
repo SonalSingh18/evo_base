@@ -539,4 +539,8 @@
     <string name="designed_battery_capacity">Designed capacity</string>
     <string name="battery_charge_cycles">Charge cycles</string>
 
+    <!-- Backup Transport selection settings menu and activity title -->
+    <string name="backup_transport_setting_label">Change backup provider</string>
+    <string name="backup_transport_title">Select backup provider</string>
+
 </resources>
