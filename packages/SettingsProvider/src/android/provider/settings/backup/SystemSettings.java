@@ -116,5 +116,6 @@ public class SystemSettings {
         Settings.System.MUSIC_TILE_TITLE,
         Settings.System.SENSOR_BLOCK,
         Settings.System.HEADS_UP_NOTIFICATIONS_THRESHOLD,
+        Settings.System.VOLUME_DIALOG_TIMEOUT,
     };
 }
