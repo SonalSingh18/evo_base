@@ -543,4 +543,9 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
+    <!-- Volume dialog timeout -->
+    <string name="unit_seconds">Sec(s)</string>
+    <string name="volume_dialog_timeout_title">Volume panel timeout</string>
+    <string name="volume_dialog_timeout_summary">The time it takes for volume panel to fade</string>
+
 </resources>
