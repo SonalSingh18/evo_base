@@ -232,4 +232,8 @@
     <java-symbol type="string" name="config_batterymeterLandBoltPathStyleB" />
     <java-symbol type="string" name="config_batterymeterLandPowersavePathStyleB" />
     <java-symbol type="string" name="config_batterymeterLandErrorPerimeterPathStyleB" />
+
+    <!-- Aerr -->
+    <java-symbol type="id" name="aerr_disable" />
+
 </resources>
