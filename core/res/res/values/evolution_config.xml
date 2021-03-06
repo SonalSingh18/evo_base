@@ -367,4 +367,9 @@
     <string name="config_batterymeterRLandBoltPathStyleB" translatable="false">@string/config_batterymeterLandBoltPathStyleB</string>
     <string name="config_batterymeterRLandPowersavePathStyleB" translatable="false">@string/config_batterymeterRLandPerimeterPathStyleB</string>
     <string name="config_batterymeterRLandErrorPerimeterPathStyleB" translatable="false">@string/config_batterymeterRLandPerimeterPathStyleB</string>
+
+    <!-- Smart cutoff -->
+    <integer name="config_smartCutoffTemperature">40</integer>
+    <integer name="config_smartCutoffResumeTemperature">35</integer>
+
 </resources>
