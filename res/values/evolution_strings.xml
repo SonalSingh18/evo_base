@@ -128,12 +128,12 @@
     <!-- Smart charging -->
     <string name="smart_charging_title">Smart charging</string>
     <string name="smart_charging_summary">Set maximum charging level</string>
-    <string name="smart_charging_master_switch_title">Use Smart Charging</string>
+    <string name="smart_charging_master_switch_title">Use Smart charging</string>
     <string name="smart_charging_level_title">Stop trigger level</string>
     <string name="smart_charging_resume_level_title">Start trigger level</string>
     <string name="smart_charging_reset_stats_title">Reset battery statistics</string>
     <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
-    <string name="smart_charging_intro_text">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
+    <string name="smart_charging_intro_text">Smart charging allows you to set maximum charging level to extend the lifespan of your battery</string>
 
     <!-- Pocket judge -->
     <string name="pocket_judge_title">Pocket detection</string>
@@ -455,4 +455,10 @@
     <!-- Lockscreen timeout -->
     <string name="lockscreen_timeout_title">Lockscreen timeout</string>
 
+    <!-- Smart cutoff -->
+    <string name="smart_cutoff_title">Smart cutoff</string>
+    <string name="smart_cutoff_summary">Set maximum temperature</string>
+    <string name="smart_cutoff_switch_title">Use Smart cutoff</string>
+    <string name="smart_cutoff_level_title">Stop trigger level</string>
+    <string name="smart_cutoff_resume_level_title">Start trigger level</string>
 </resources>
