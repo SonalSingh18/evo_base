@@ -187,6 +187,11 @@ PRODUCT_PACKAGES += \
 TARGET_SUPPORTS_QUICK_TAP ?= false
 TARGET_USES_MINI_GAPPS ?= false
 
+# Prebuilt apps
+PRODUCT_PACKAGES += \
+    MetroMusicPlayer \
+    ViaBrowser
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
