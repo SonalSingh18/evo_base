@@ -1372,4 +1372,9 @@
     <string name="lockscreen_hide_shortcuts_title">Hide bottom shortcuts</string>
     <string name="lockscreen_hide_shortcuts_summary">Hide left-right shortcuts on secure lock screens</string>
 
+    <!-- Statusbar left_right padding -->
+    <string name="statusbar_padding">Padding</string>
+    <string name="statusbar_left_padding">Left padding</string>
+    <string name="statusbar_right_padding">Right padding</string>
+
 </resources>
