@@ -461,4 +461,9 @@
     <string name="smart_cutoff_switch_title">Use Smart cutoff</string>
     <string name="smart_cutoff_level_title">Stop trigger level</string>
     <string name="smart_cutoff_resume_level_title">Start trigger level</string>
+
+    <!-- Idle Manager -->
+    <string name="idle_manager_title">Idle Manager</string>
+    <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
 </resources>
