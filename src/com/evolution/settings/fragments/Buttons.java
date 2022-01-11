@@ -81,6 +81,8 @@ public class Buttons extends ActionFragment implements
     private static final String KEY_BUTTON_TIMEOUT = "button_timeout";
     private static final String KEY_BUTON_BACKLIGHT_OPTIONS = "button_backlight_options_category";
 
+    private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
+
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
     public static final int KEY_MASK_HOME = 0x01;
@@ -101,6 +103,7 @@ public class Buttons extends ActionFragment implements
     private SystemSettingSwitchPreference mNavbarInverse;
     private SystemSettingSwitchPreference mNavigationArrows;
     private SystemSettingSwitchPreference mNavigationCompactLayout;
+    private SwitchPreference mPixelNavAnimation;
 
     private boolean mIsNavSwitchingMode = false;
 
@@ -222,6 +225,8 @@ public class Buttons extends ActionFragment implements
         mNavigationArrows.setEnabled(isThreeButtonNavbarEnabled);
         mNavigationCompactLayout = (SystemSettingSwitchPreference) findPreference(KEY_NAVIGATION_COMPACT_LAYOUT);
         mNavigationCompactLayout.setEnabled(isThreeButtonNavbarEnabled);
+        mPixelNavAnimation = (SwitchPreference) findPreference(PIXEL_NAV_ANIMATION);
+        mPixelNavAnimation.setEnabled(isThreeButtonNavbarEnabled);
 
         mHandler = new Handler();
     }
