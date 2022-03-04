@@ -115,5 +115,6 @@ public class SystemSettings {
         Settings.System.LOCKSCREEN_BATTERY_INFO,
         Settings.System.MUSIC_TILE_TITLE,
         Settings.System.SENSOR_BLOCK,
+        Settings.System.HEADS_UP_NOTIFICATIONS_THRESHOLD,
     };
 }

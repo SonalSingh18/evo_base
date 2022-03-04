@@ -6288,6 +6288,13 @@ public final class Settings {
         public static final String HEADS_UP_BLACKLIST_VALUES = "heads_up_blacklist_values";
 
         /**
+         * Heads up notifications threshold
+         * Default 0
+         * @hide
+         */
+        public static final String HEADS_UP_NOTIFICATIONS_THRESHOLD = "heads_up_notifications_threshold";
+
+        /**
          * Whether to enable status and navigation bar color in battery saver mode.
          * Heads up timeout configuration
          * @hide

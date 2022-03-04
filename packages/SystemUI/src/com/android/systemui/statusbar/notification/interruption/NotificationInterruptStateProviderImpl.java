@@ -264,7 +264,7 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
             return false;
         }
 
-        if (entry.getImportance() < NotificationManager.IMPORTANCE_HIGH) {
+        if (entry.getImportance() < getNotificationImportanceForUser()) {
             if (DEBUG_HEADS_UP) {
                 Log.d(TAG, "No heads up: unimportant notification: " + sbn.getKey());
             }
@@ -335,6 +335,13 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
         final String blackString = Settings.System.getString(mContext.getContentResolver(),
                     Settings.System.HEADS_UP_BLACKLIST_VALUES);
         splitAndAddToArrayList(mBlacklist, blackString, "\\|");
+    }
+
+    private int getNotificationImportanceForUser() {
+          return Settings.System.getIntForUser(
+                  mContentResolver,
+                  Settings.System.HEADS_UP_NOTIFICATIONS_THRESHOLD,
+                  NotificationManager.IMPORTANCE_HIGH, UserHandle.USER_CURRENT);
     }
 
     /**
