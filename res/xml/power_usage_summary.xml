@@ -107,40 +107,46 @@
         <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
     </Preference>
 
+    <Preference
+        android:key="sleep_mode"
+        android:order="6"
+        android:title="@string/sleep_mode_title"
+        android:fragment="com.android.settings.fuelgauge.sleepmode.SleepMode" />
+
     <com.evolution.settings.preference.SystemSettingSwitchPreference
         android:key="arcane_idle_manager"
-        android:order="6"
+        android:order="7"
         android:title="@string/idle_manager_title"
         android:summary="@string/idle_manager_summary"
         android:defaultValue="false" />
 
     <com.evolution.settings.preference.SystemSettingSwitchPreference
         android:key="battery_24_hrs_stats"
-        android:order="7"
+        android:order="8"
         android:title="@string/advanced_battery_preference_summary_with_hours"
         android:defaultValue="false"
         settings:searchable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="designed_battery_capacity"
-        android:order="8"
+        android:order="9"
         android:title="@string/designed_battery_capacity"
         android:selectable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="current_battery_capacity"
-        android:order="9"
+        android:order="10"
         android:title="@string/current_battery_capacity"
         android:selectable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference 
         android:key="battery_charge_cycles"
-        android:order="10"
+        android:order="11"
         android:title="@string/battery_charge_cycles"
         android:selectable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
-        android:order="11"
+        android:order="12"
         android:key="battery_temp"
         android:title="@string/battery_temp"
         android:selectable="false" />
