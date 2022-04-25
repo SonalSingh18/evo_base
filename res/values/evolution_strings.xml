@@ -1345,4 +1345,13 @@
     <string name="lock_screen_custom_clock_face_oos">OOS</string>
     <string name="lock_screen_custom_clock_face_clockertino">Clockertino</string>
 
+    <!-- HeadsUp notifications importance threshold -->
+    <!--string name="hun_importance_none">None</string-->
+    <string name="hun_importance_title">Importance threshold</string>
+    <string name="hun_importance_min">Minimum</string>
+    <string name="hun_importance_low">Low</string>
+    <string name="hun_importance_default">Default</string>
+    <string name="hun_importance_high">High</string>
+    <string name="hun_importance_max">Maxiumum</string>
+
 </resources>
