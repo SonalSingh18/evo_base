@@ -1113,4 +1113,14 @@
     <!-- Squiggle animation -->
     <string name="show_squiggle_animation_title">Show squiggle animation</string>
     <string name="show_squiggle_animation_summary">Show media panel squiggle animation, after change need to switch music, pause music or move the progress bar to apply</string>
+
+    <!-- HeadsUp notifications importance threshold -->
+    <!--string name="hun_importance_none">None</string-->
+    <string name="hun_importance_title">Importance threshold</string>
+    <string name="hun_importance_min">Minimum</string>
+    <string name="hun_importance_low">Low</string>
+    <string name="hun_importance_default">Default</string>
+    <string name="hun_importance_high">High</string>
+    <string name="hun_importance_max">Maxiumum</string>
+
 </resources>
