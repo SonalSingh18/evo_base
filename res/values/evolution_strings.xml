@@ -1157,4 +1157,8 @@
     <!-- Clock background chip -->
     <string name="status_bar_show_clock_bg">Show clock background chip</string>
 
+    <!-- QS footer data usage -->
+    <string name="qs_show_data_usage_title">Show data usage</string>
+    <string name="qs_show_data_usage_summary">Show daily cellular/Wi-Fi data usage in QS footer</string>
+
 </resources>
