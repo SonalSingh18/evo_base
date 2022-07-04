@@ -143,6 +143,13 @@
             android:summary="@string/strict_standby_policy_summary"
             android:defaultValue="false"/>
 
+        <com.evolution.settings.preference.GlobalSettingSwitchPreference
+            android:key="force_background_freezer"
+            android:title="@string/force_background_freezer_title"
+            android:summary="@string/force_background_freezer_summary"
+            settings:controller="com.evolution.settings.preference.ForceBackgroundFreezePreferenceController"
+            android:defaultValue="false"/>
+
         <com.evolution.settings.preference.SystemSettingSwitchPreference
             android:key="toast_icon"
             android:title="@string/toast_icon_title"
