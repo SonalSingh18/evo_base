@@ -1,4 +1,4 @@
-ifeq ($(EVO_BUILD_TYPE), OFFICIAL)
+ifeq ($(EVO_BUILD_TYPE), CUSTOM)
 
 EVO_OTA_VERSION_CODE := twelve
 
