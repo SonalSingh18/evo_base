@@ -43,7 +43,7 @@ public final class Constants {
     public static final String PROP_BUILD_VERSION_2 = "org.evolution.build_version";
     public static final String PROP_VERSION = "org.evolution.version";
     public static final String PROP_KEY_TYPE = "org.evolution.key_type";
-    public static final String OTA_URL = "https://raw.githubusercontent.com/Evolution-X-Devices/official_devices/master/";
+    public static final String OTA_URL = "https://raw.githubusercontent.com/SonalSingh18/custom_ota12/master/";
     public static final String DOWNLOAD_PATH = "/data/system_updates/";
     public static final String EXPORT_PATH = "EvolutionX-Updates/";
     public static final String HAS_SEEN_INFO_DIALOG = "has_seen_info_dialog";
