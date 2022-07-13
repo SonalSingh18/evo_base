@@ -240,11 +240,13 @@ public class VolumeDialogImpl implements VolumeDialog,
     private ViewGroup mODICaptionsView;
     private CaptionsToggleImageButton mODICaptionsIcon;
     private View mSettingsView;
+    private View mSettingsViewSpacer;
     private RotateAnimation rotateAnimation;
     private ImageButton mSettingsIcon;
     private ImageButton mExpandRows;
     private View mExpandRowsView;
     private View mAppVolumeView;
+    private View mAppVolumeViewSpacer;
     private ImageButton mAppVolumeIcon;
     private String mAppVolumeActivePackageName;
     private FrameLayout mZenIcon;
@@ -618,6 +620,7 @@ public class VolumeDialogImpl implements VolumeDialog,
         }
 
         mSettingsView = mDialog.findViewById(R.id.settings_container);
+        mSettingsViewSpacer = mDialog.findViewById(R.id.settings_container_spacer);
         mSettingsIcon = mDialog.findViewById(R.id.settings);
 
         mExpandRowsView = mDialog.findViewById(R.id.expandable_indicator_container);
@@ -625,6 +628,7 @@ public class VolumeDialogImpl implements VolumeDialog,
         mExpandRows.setOnLongClickListener(this);
 
         mAppVolumeView = mDialog.findViewById(R.id.app_volume_container);
+        mAppVolumeViewSpacer = mDialog.findViewById(R.id.app_volume_spacer);
         mAppVolumeIcon = mDialog.findViewById(R.id.app_volume);
 
         if (mVolumePanelOnLeft) {
@@ -1227,6 +1231,10 @@ public class VolumeDialogImpl implements VolumeDialog,
                     && mActivityManager.getLockTaskModeState() == LOCK_TASK_MODE_NONE
                     && isBluetoothA2dpConnected()
                     ? VISIBLE : GONE);
+            mSettingsViewSpacer.setVisibility(mDeviceProvisionedController.isCurrentUserSetup()
+                    && mActivityManager.getLockTaskModeState() == LOCK_TASK_MODE_NONE
+                    && isBluetoothA2dpConnected()
+                    ? VISIBLE : GONE);
         }
         if (mSettingsIcon != null) {
             mSettingsIcon.setOnClickListener(v -> {
@@ -1297,6 +1305,7 @@ public class VolumeDialogImpl implements VolumeDialog,
     public void initAppVolumeH() {
         if (mAppVolumeView != null) {
             mAppVolumeView.setVisibility(shouldShowAppVolume() ? VISIBLE : GONE);
+            mAppVolumeViewSpacer.setVisibility(shouldShowAppVolume() ? VISIBLE : GONE);
         }
         if (mAppVolumeIcon != null) {
             mAppVolumeIcon.setOnClickListener(v -> {
