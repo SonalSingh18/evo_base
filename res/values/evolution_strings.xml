@@ -681,7 +681,7 @@
     <string name="qs_tint_title">QS tile tint style</string>
     <string name="qs_tint_accent">Accent color</string>
 
-    <!-- Lock screen Clocks
+    <!-- Lock screen Clocks -->
     <string name="clock_show_status_area">Show status area (weather etc.)</string>
     <string name="clock_show_status_area_summary">Show the extra row of info under the lock screen clock (SysUI restart may be required)</string>
     <string name="lock_screen_custom_clock_face_category">Lock screen Clock</string>
@@ -711,7 +711,7 @@
     <string name="lock_screen_custom_clock_face_spectrum">Spectrum</string>
     <string name="lock_screen_custom_clock_face_sticker_tag">Sticker Tag</string>
     <string name="lock_screen_custom_clock_face_typographic">Typographic</string>
-    <string name="lock_screen_custom_clock_face_typographic_alt">Typographic (Center)</string>-->
+    <string name="lock_screen_custom_clock_face_typographic_alt">Typographic (Center)</string>
 
     <!-- Volume rocker gestures -->
     <string name="volume_skiptrack_screen_title">Skip music tracks</string>
@@ -1337,15 +1337,6 @@
     <!-- QS Transparency -->
     <string name="qs_transparency_title">Background transparency</string>
     <string name="qs_transparency_summary">Set transparency level for QS background</string>
-
-    <!-- Lockscreen Clocks -->
-    <string name="lock_screen_custom_clock_face_title">Lockscreen clock style</string>
-    <string name="lock_screen_custom_clock_face_default">Default</string>
-    <string name="lock_screen_custom_clock_face_sfunny">Sfuny</string>
-    <string name="lock_screen_custom_clock_face_oos">OOS</string>
-    <string name="lock_screen_custom_clock_face_clockertino">Clockertino</string>
-    <string name="lock_screen_custom_clock_face_spark">Spark</string>
-    <string name="lock_screen_custom_clock_face_spark_circle">Spark Circle</string>
 
     <!-- HeadsUp notifications importance threshold -->
     <!--string name="hun_importance_none">None</string-->

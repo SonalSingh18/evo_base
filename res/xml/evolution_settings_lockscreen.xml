@@ -48,13 +48,6 @@
             android:title="@string/always_on_display_schedule_title"
             android:fragment="com.evolution.settings.fragments.AODSchedule" />
 
-        <ListPreference
-            android:key="lock_screen_custom_clock_face"
-            android:summary="%s"
-            android:title="@string/lock_screen_custom_clock_face_title"
-            android:entries="@array/lock_screen_custom_clock_face_entries"
-            android:entryValues="@array/lock_screen_custom_clock_face_values" />
-
         <com.evolution.settings.preference.SystemSettingSwitchPreference
             android:key="hide_lockscreen_status_bar"
             android:title="@string/hide_lockscreen_status_bar_title"
