@@ -28,6 +28,9 @@
     <!-- Smart Charging -->
     <bool name="config_supportSmartCharging">false</bool>
 
+    <!-- Smart Cutoff -->
+    <bool name="config_supportSmartCutoff">false</bool>
+
     <!-- Battery Health -->
     <string name="config_batCurCap"></string>
     <string name="config_batDesCap"></string>
