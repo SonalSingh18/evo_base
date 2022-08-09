@@ -370,6 +370,7 @@
     <string name="config_batterymeterRLandErrorPerimeterPathStyleB" translatable="false">@string/config_batterymeterRLandPerimeterPathStyleB</string>
 
     <!-- Smart cutoff -->
+    <bool name="config_supportSmartCutoff">false</bool>
     <integer name="config_smartCutoffTemperature">40</integer>
     <integer name="config_smartCutoffResumeTemperature">35</integer>
 

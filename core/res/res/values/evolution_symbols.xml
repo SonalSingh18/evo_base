@@ -238,6 +238,7 @@
     <java-symbol type="id" name="aerr_disable" />
 
     <!-- Smart cutoff temperature -->
+    <java-symbol type="bool" name="config_supportSmartCutoff" />
     <java-symbol type="integer" name="config_smartCutoffTemperature" />
     <java-symbol type="integer" name="config_smartCutoffResumeTemperature" />
 

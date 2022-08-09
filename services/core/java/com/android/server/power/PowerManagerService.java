@@ -776,6 +776,7 @@ public final class PowerManagerService extends SystemService
     private static String mPowerInputResumeValue;
 
     // Smart Cutoff
+    private boolean mSmartCutoffAvailable;
     private boolean mSmartCutoffEnabled;
     private int mSmartCutoffResumeTemperature;
     private int mSmartCutoffTemperature;
@@ -1483,6 +1484,8 @@ public final class PowerManagerService extends SystemService
         mPowerInputResumeValue = resources.getString(
                 com.android.internal.R.string.config_SmartChargingResumeValue);
          // Smart Cutoff
+        mSmartCutoffAvailable = resources.getBoolean(
+                com.android.internal.R.bool.config_supportSmartCutoff);
         mSmartCutoffTemperatureDefaultConfig = resources.getInteger(
                 com.android.internal.R.integer.config_smartCutoffTemperature);
         mSmartCutoffResumeTemperatureConfig = resources.getInteger(
@@ -2538,6 +2541,7 @@ public final class PowerManagerService extends SystemService
      */
     private void updateSmartFeatureStatus() {
         if (!mSmartChargingAvailable) return;
+        if (!mSmartCutoffAvailable) return;
         if (mPowerInputSuspended) {
             boolean resumeBySmartCharging = !mSmartChargingEnabled || (mSmartChargingEnabled && (mBatteryLevel <= mSmartChargingResumeLevel));
             boolean resumeBySmartCutoff = !mSmartCutoffEnabled || (mSmartCutoffEnabled && (mBatteryTemperature <= mSmartCutoffResumeTemperature));
