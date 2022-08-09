@@ -7,6 +7,9 @@
     <!-- Smart Charging -->
     <java-symbol type="bool" name="config_supportSmartCharging" />
 
+    <!-- Smart Cutoff -->
+    <java-symbol type="bool" name="config_supportSmartCutoff" />
+
     <!-- Battery Health -->
     <java-symbol type="bool" name="config_supportBatteryHealth" />
 
