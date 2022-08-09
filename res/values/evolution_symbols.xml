@@ -5,9 +5,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Smart Cutoff -->
-    <java-symbol type="bool" name="config_supportSmartCutoff" />
-
     <!-- Battery Health -->
     <java-symbol type="bool" name="config_supportBatteryHealth" />
 

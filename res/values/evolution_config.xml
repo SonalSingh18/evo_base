@@ -25,9 +25,6 @@
     <!-- Max network scan search time in seconds -->
     <integer name="config_network_scan_helper_max_search_time_sec">300</integer>
 
-    <!-- Smart Cutoff -->
-    <bool name="config_supportSmartCutoff">false</bool>
-
     <!-- Battery Health -->
     <string name="config_batCurCap"></string>
     <string name="config_batDesCap"></string>

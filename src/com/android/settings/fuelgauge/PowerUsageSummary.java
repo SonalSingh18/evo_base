@@ -224,7 +224,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
 
         // Check availability of Smart Cutoff
         Preference mSmartCutoff = (Preference) findPreference("smart_cutoff_key");
-        if (!getResources().getBoolean(R.bool.config_supportSmartCutoff)) {
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_supportSmartCutoff)) {
             getPreferenceScreen().removePreference(mSmartCutoff);
         }
 
