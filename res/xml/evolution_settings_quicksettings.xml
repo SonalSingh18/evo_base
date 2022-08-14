@@ -18,6 +18,14 @@
             android:summary="@string/qs_date_summary"
             android:defaultValue="true" />
 
+        <com.evolution.settings.preference.SystemSettingSeekBarPreference
+            android:key="qs_header_clock_size"
+            android:title="@string/clock_font_size_title"
+            android:max="27"
+            settings:min="10"
+            android:defaultValue="14"
+            settings:units="dp"/>
+
         <!-- Battery styles -->
         <com.evolution.settings.preference.SystemSettingListPreference
             android:key="qs_battery_style"

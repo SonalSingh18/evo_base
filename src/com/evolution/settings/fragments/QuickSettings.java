@@ -65,6 +65,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String KEY_PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String KEY_PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String KEY_PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
+    private static final String KEY_QS_CLOCK_SIZE = "qs_header_clock_size";
 
     private ListPreference mTileAnimationInterpolator;
     private ListPreference mTileAnimationStyle;
@@ -73,6 +74,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private ListPreference mBrightnessSliderPosition;
     private ListPreference mQuickPulldown;
     private SwitchPreference mShowAutoBrightness;
+    private SystemSettingSeekBarPreference mQsClockSize;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -116,6 +118,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         int tileAnimationStyle = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_TILE_ANIMATION_STYLE, 0, UserHandle.USER_CURRENT);
         updateAnimTileStyle(tileAnimationStyle);
+
+        mQsClockSize = (SystemSettingSeekBarPreference) findPreference(KEY_QS_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+        mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -139,6 +147,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         } else if (preference == mTileAnimationStyle) {
             int value = Integer.parseInt((String) newValue);
             updateAnimTileStyle(value);
+            return true;
+        } else if (preference == mQsClockSize) {
+            int width = ((Integer) newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_HEADER_CLOCK_SIZE, width);
             return true;
         }
         return false;
