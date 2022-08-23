@@ -42,7 +42,6 @@ import com.android.systemui.dock.DockManager;
 import com.android.systemui.doze.DozeMachine.State;
 import com.android.systemui.doze.dagger.DozeScope;
 import com.android.systemui.statusbar.phone.DozeParameters;
-import com.android.systemui.statusbar.phone.KeyguardLiftController;
 import com.android.systemui.statusbar.policy.DevicePostureController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
 import com.android.systemui.util.Assert;
@@ -98,7 +97,6 @@ public class DozeTriggers implements DozeMachine.Part {
     private final AuthController mAuthController;
     private final DelayableExecutor mMainExecutor;
     private final KeyguardStateController mKeyguardStateController;
-    private final KeyguardLiftController mKeyguardLiftController;
     private final UiEventLogger mUiEventLogger;
     private final DevicePostureController mDevicePostureController;
 
@@ -190,7 +188,6 @@ public class DozeTriggers implements DozeMachine.Part {
             @Main DelayableExecutor mainExecutor,
             UiEventLogger uiEventLogger,
             KeyguardStateController keyguardStateController,
-            KeyguardLiftController keyguardLiftController,
             DevicePostureController devicePostureController) {
         mContext = context;
         mDozeHost = dozeHost;
@@ -214,7 +211,6 @@ public class DozeTriggers implements DozeMachine.Part {
         mMainExecutor = mainExecutor;
         mUiEventLogger = uiEventLogger;
         mKeyguardStateController = keyguardStateController;
-        mKeyguardLiftController = keyguardLiftController;
     }
     private final DevicePostureController.Callback mDevicePostureCallback =
             posture -> {
@@ -330,7 +326,6 @@ public class DozeTriggers implements DozeMachine.Part {
                         return;
                     }
                     gentleWakeUp(pulseReason);
-                    mKeyguardLiftController.setPickupWake(true);
                 } else if (isUdfpsLongPress) {
                     final State state = mMachine.getState();
                     if (state == State.DOZE_AOD || state == State.DOZE) {
