@@ -81,6 +81,18 @@
             settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController"
             settings:userRestriction="no_ambient_display" />
 
+        <SwitchPreference
+            android:key="doze_on_charge"
+            android:title="@string/doze_on_charge_title"
+            android:summary="@string/doze_on_charge_summary"
+            settings:controller="com.android.settings.display.DozeOnChargePreferenceController" />
+
+        <SwitchPreference
+            android:key="pulse_on_new_tracks"
+            android:title="@string/pulse_on_new_tracks_title"
+            android:summary="@string/pulse_on_new_tracks_summary"
+            settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
+
         <Preference
             android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
             android:key="ambient_display_tap"
@@ -102,12 +114,12 @@
             settings:controller="com.android.settings.gestures.PickupGesturePreferenceController"
             settings:searchable="false" />
 
-        <Preference
-            android:key="gesture_screen_off_udfps_input_summary"
-            android:title="@string/ambient_display_screen_off_udfps_title"
-            android:fragment="com.android.settings.gestures.ScreenOffUdfpsSettings"
-            settings:searchable="false"
-            settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
+        <com.evolution.settings.preference.SecureSettingSwitchPreference
+            android:key="screen_off_udfps_enabled"
+            android:title="@string/screen_off_udfps_title"
+            android:summary="@string/screen_off_udfps_summary"
+            android:defaultValue="false"
+            settings:controller="com.android.settings.security.UdfpsGesturePreferenceController" />
 
         <SwitchPreference
             android:key="ambient_display_notification"
@@ -115,13 +127,9 @@
             android:title="@string/doze_title"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
 
-        <com.android.settings.custom.preference.RemotePreference
-            android:key="doze_device_settings"
-            android:title="@string/ambient_display_screen_title"
-            settings:requiresAction="org.lineageos.settings.device.DOZE_SETTINGS"
-            settings:replacesKey="ambient_display_always_on|ambient_display_notification">
-            <intent android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
-        </com.android.settings.custom.preference.RemotePreference>
+        <Preference
+            android:key="ambient_display_custom"
+            android:title="@string/advanced_settings" />
 
     </PreferenceCategory>
 
