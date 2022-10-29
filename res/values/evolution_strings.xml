@@ -1153,4 +1153,11 @@
     <string name="qs_columns_portrait_title">Columns (portrait)</string>
     <string name="qs_columns_landscape_title">Columns (landscape)</string>
 
+    <!-- Ambient battery bar settings -->
+    <string name="keyguard_battery_bar_title">Battery bar</string>
+    <string name="keyguard_show_battery_title">Battery bar when charging</string>
+    <string name="keyguard_show_battery_summary">Show a battery bar on the ambient display when charging</string>
+    <string name="keyguard_show_battery_always_title">Always show battery bar</string>
+    <string name="keyguard_show_battery_always_summary">Always show a battery bar on the ambient display</string>
+
 </resources>
