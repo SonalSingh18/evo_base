@@ -65,6 +65,7 @@ import com.android.systemui.qs.tiles.RefreshRateTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
+import com.android.systemui.qs.tiles.SleepModeTile;
 import com.android.systemui.qs.tiles.SmartPixelsTile;
 import com.android.systemui.qs.tiles.SoundSearchTile;
 import com.android.systemui.qs.tiles.SoundTile;
@@ -150,7 +151,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<VPNTetheringTile> vpnTetheringTileProvider,
             Provider<PreferredNetworkTile> preferredNetworkTileProvider,
             Provider<GloveModeTile> gloveModeTileProvider,
-            Provider<CompassTile> compassTileProvider) {
+            Provider<CompassTile> compassTileProvider,
+            Provider<SleepModeTile> sleepModeTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -207,7 +209,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 vpnTetheringTileProvider,
                 preferredNetworkTileProvider,
                 gloveModeTileProvider,
-                compassTileProvider);
+                compassTileProvider,
+                sleepModeTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
