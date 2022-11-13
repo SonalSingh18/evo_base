@@ -1160,4 +1160,7 @@
     <string name="keyguard_show_battery_always_title">Always show battery bar</string>
     <string name="keyguard_show_battery_always_summary">Always show a battery bar on the ambient display</string>
 
+    <!-- Clock background chip -->
+    <string name="status_bar_show_clock_bg">Show clock background chip</string>
+
 </resources>
